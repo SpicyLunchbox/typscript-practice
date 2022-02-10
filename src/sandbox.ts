@@ -1,5 +1,7 @@
 // initialize compile and watch with tsc sandbox.ts -w
+// with tsconfig.json, only tsc -w is required
 // typescript uses inference to determine what type a variable is
+// typescript utilizes strict type
 
 let character = "mario";
 let age = 30;
@@ -29,3 +31,32 @@ let ninja = {
 	belt: "black",
 	age: 30,
 };
+
+// line below won't work
+// ninja.skills = ['fighting', 'sneaking']
+
+// initializes the variable and declares its type
+let example: string;
+let year: number;
+let isLoggedIn: boolean;
+
+// an array of strings
+let foods: string[];
+
+// union types
+
+// this variable can be an array with strings and numbers
+let mixedArr: (string | number)[] = [];
+
+let uid: string | number;
+
+let ninjaOne: object;
+
+let ninjaTwo: {
+	name: string;
+	age: number;
+	belt: string;
+};
+
+// any allows for dynamic typing
+let chocolate: any;
